@@ -22,11 +22,13 @@ This document records the exact steps I followed to install and configure the **
 4. Completed installation.
 
 **Proof Screenshot:**  
-![Agent Install Wizard](../proof/agent_install.png)
+
+![Agent Install Wizard](../Proof/addagent.png)
 
 ---
 
 ## 3️⃣ Configure File Integrity Monitoring (FIM)
+
 1. Navigated to:
 ```
 C:\Program Files (x86)\ossec-agent\ossec.conf
@@ -39,20 +41,26 @@ C:\Program Files (x86)\ossec-agent\ossec.conf
 
 3. Saved file.
 
-Proof Screenshot:
+**Proof Screenshot:**
+
+![FIM](../Proof/config.png)
 
 ---
 
 4️⃣ Restart Wazuh Agent Service
+
 Opened Services.msc
 
 Restarted Wazuh Agent service
 
-Proof Screenshot:
+**Proof Screenshot:**
+
+![Restart_Service](../Proof/service.png)
 
 ---
 
 5️⃣ Verification in Wazuh Dashboard
+
 Navigated to Wazuh Dashboard → Agents
 
 Verified Windows Agent status = Active
@@ -65,11 +73,14 @@ Deleted the file
 
 Confirmed both events were captured in dashboard logs.
 
-Proof Screenshot:
+**Proof Screenshot:**
+
+![Dashboard](../Proof/dash.png)
 
 ---
 
 ✅ Status
+
 Windows Agent installed and connected to Manager
 
 File Integrity Monitoring configured and verified
