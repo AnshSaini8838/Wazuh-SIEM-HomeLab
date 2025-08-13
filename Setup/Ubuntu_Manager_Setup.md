@@ -35,7 +35,7 @@ bash wazuh-install.sh -a
 
 #After installation is complete there is username and password Save the Login Password for login
 Proof Screenshot:
-
+```
 ---
 
 ## 3️⃣  Accessing Dashboard
@@ -62,5 +62,6 @@ Proof Screenshot:
 Wazuh Manager fully installed
 
 Accessible from host machine
+
 
 Ready to receive logs from Windows Agent
