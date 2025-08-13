@@ -34,15 +34,22 @@ curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh
 bash wazuh-install.sh -a
 
 #After installation is complete there is username and password Save the Login Password for login
-Proof Screenshot:
+**Proof Screenshot**
+![Username:Password](../Proof/Username_Password.png)
 ```
+
 ---
 
 ## 3️⃣  Accessing Dashboard
 Open: https://192.168.X.217
 
 Logged in with default credentials shown during installation.
-Proof Screenshot:
+
+**Proof Screenshot**
+
+![Dashboard](../Proof/Dashboard1.png)
+
+![Dashboard](../Proof/dashboard2.png)
 
 ---
 
@@ -54,7 +61,9 @@ Added agent → copied generated authentication key.
 
 Saved key for Windows Agent setup.
 
-Proof Screenshot:
+**Proof Screenshot**
+
+![Agent](../Proof/agent.png)
 
 ---
 
@@ -62,6 +71,5 @@ Proof Screenshot:
 Wazuh Manager fully installed
 
 Accessible from host machine
-
 
 Ready to receive logs from Windows Agent
