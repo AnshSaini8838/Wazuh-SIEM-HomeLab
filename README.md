@@ -25,7 +25,7 @@ Windows Host (Agent) <----> Ubuntu VM (Manager)
 ---
 
 
-![Architecture Diagram](proof/architecture_diagram.png)
+![Architecture Diagram](Proof/architecture_diagram.png)
 
 ---
 
@@ -93,7 +93,7 @@ Wazuh Agent for Windows
 2. Install the MSI package on your Windows system using the default settings.
 
 ---
-5️⃣ Registeringthe Agent with the Manager
+### 5️⃣ Registeringthe Agent with the Manager
 
 5.1 Generate Agent Key on Ubuntu Manager
 
@@ -122,3 +122,64 @@ sudo /var/ossec/bin/manage_agents
 You can then go to the WAZUH dashboard and see the agent onboarded.
 
 ---
+### 6️⃣ File Integrity Monitoring (FIM) on Windows
+
+Wazuh supports real-time monitoring of file and folder changes using Syscheck.
+
+6.1 Edit Agent Configuration
+
+Open the following configuration file in Notepad as Addministrator:
+```
+C:\Program Files (x86)\ossec-agent\ossec.conf
+```
+Add the following entry inside the Directory block:
+```
+<directories realtime="yes">Your_Desired_Directory's_path</directories>
+```
+This monitors the specified folder in real-time.
+
+6.2 Restart the Agent
+
+After saving the changes, restart the Wazuh agent service to apply the configuration.
+
+---
+### 7️⃣ Verifying the Setup
+
+1. Open the Wazuh Dashboard in your browser.
+
+2. Navigate to Agents → ensure the Windows agent is listed and status is Active.
+
+3. Go to the Integrity Monitoring section.
+
+4. Perform actions (create/modify/delete files) in the monitored folder.
+
+5. Confirm that alerts appear in the dashboard.
+
+---
+### 📸 Proof of Work
+Step	Screenshot
+
+Wazuh Dashboard Login	
+
+Windows Agent Added	
+
+Directory Monitoring Config	
+
+File Created Log	
+
+File Deleted Log	
+
+### 📊 Learning Outcomes
+
+Successfully deployed and configured enterprise-grade SIEM
+
+Integrated endpoint log forwarding & correlation
+
+Performed File Integrity Monitoring
+
+Practiced SOC-style monitoring in a home lab setup
+
+### ⚠ Disclaimer
+This project is for educational purposes only.
+
+No offensive testing or unauthorized scanning was performed.
